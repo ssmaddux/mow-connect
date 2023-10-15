@@ -59,7 +59,7 @@ const main = async () => {
   company3.save()
 
   const appointment1 = await new Appointment ({
-    date: "20231014",
+    date: new Date("2023-10-13"),
     time: "0900",
     company: company1._id,
     customer:customer1._id,
@@ -68,7 +68,7 @@ const main = async () => {
   appointment1.save()
 
   const appointment2 = await new Appointment ({
-    date: "20231015",
+    date: new Date("2023-10-14"),
     time: "1000",
     company: company2._id,
     customer:customer2._id,
@@ -77,7 +77,7 @@ const main = async () => {
   appointment2.save()
 
   const appointment3 = await new Appointment ({
-    date: "20231016",
+    date: new Date("2023-10-15"),
     time: "1200",
     company: company3._id,
     customer:customer3._id,
