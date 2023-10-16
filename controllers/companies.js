@@ -1,6 +1,6 @@
 const { Company }  = require('../models');
 
-const getAllCompanys = async (req, res) => {
+const getAllCompanies = async (req, res) => {
     try {
         const companys = await Company.find()
         res.json(companys)
@@ -63,7 +63,7 @@ async function deleteCompany(req,res) {
 
 
 module.exports = {
-    getAllCompanys,
+    getAllCompanies,
     getOneCompany,
     createCompany,
     updateCompany,
