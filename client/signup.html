@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="signup.css">
-    <title>sign In</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="signup.js"></script>
+
+    <title>sign up</title>
 </head>
 <body>
     <div class="header">
@@ -19,22 +22,22 @@
                 <input type="checkbox" name="company" id="company" class="checkbox">
             </div>
         <div class="inputdiv">
-            <input type="text" placeholder="Email" class="input">
-            <input type="password" placeholder="Password" class="input">
-            <input type="password" placeholder="Confirm password" class="input">
-            <input type="text" placeholder="Full Name" class="input">
-            <input type="text" placeholder="Address" class="input">
-            <input type="text" placeholder="Phone" class="input">
+            <input type="text" placeholder="Email" class="input" id="emailinfo">
+            <input type="password" placeholder="Password" class="input" id="password">
+            <input type="password" placeholder="Confirm password" class="input" id="passwordvalid">
+            <input type="text" placeholder="Full Name" class="input" id="name">
+            <input type="text" placeholder="Address" class="input" id="address">
+            <input type="text" placeholder="Phone" class="input" id="phone">
             <!-- <input type="date" id="datePicker"> -->
 
         </div>
     </div>
     <div class="submitdiv">
-        <button class="submitbutton">Submit</button>
-        <button class="cancelbutton">Cancel</button>
+        <button class="submitbutton" id="submitbutton">Submit</button>
+        <button class="cancelbutton" id="cancelbutton">Cancel</button>
     </div>
     <div class="footer">
-        <a href="index2.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="">Contact</a>
     </div>
 </body>

@@ -27,8 +27,9 @@ app.get('/customers/:id', customerController.getOneCustomer)
 app.get('/appointments/:id', appointmentController.getOneAppointment)
 
 
-app.post('/companies', companyController.createCompany)
-app.post('/customers', customerController.createCustomer)
+app.post('signup.html', companyController.createCompany)
+app.post('/signup', customerController.createCustomer)
+//ned appropriate path here
 app.post('/appointments', appointmentController.createAppointment)
 
 app.put('/companies/:id', companyController.updateCompany)

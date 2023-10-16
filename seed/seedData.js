@@ -23,11 +23,11 @@ const main = async () => {
   customer2.save()
 
   const customer3 = await new Customer ({
-    name: "Erik Smith",
-    address: "123 Shiesty Lane",
-    phone: "1112223333",
-    email: "esiff@gmail.com",
-    password: "eDog1"
+    name: "jeniffer Jones",
+    address: "687 milbrook Street",
+    phone: "7778889999",
+    email: "jjones@gmail.com",
+    password: "jj111"
   })
   customer3.save()
 
