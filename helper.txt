@@ -1,0 +1,30 @@
+const Appointment = require('./models/appointment');
+const Customer = require('./models/customer');
+
+// Assume you have the customer's _id and want to create an appointment with their address.
+const customerId = 'some_customer_id';
+
+// Find the customer by their ID.
+Customer.findById(customerId, (err, customer) => {
+  if (err) {
+    // Handle the error.
+  } else {
+    // Create an appointment using the customer's address.
+    const appointment = new Appointment({
+      date: new Date(),
+      time: '10:00 AM',
+      company: 'some_company_id',
+      customer: customerId,
+      address: customer.address // Use the customer's address here.
+    });
+
+    // Save the appointment to the database.
+    appointment.save((err) => {
+      if (err) {
+        // Handle the error.
+      } else {
+        // Appointment successfully created.
+      }
+    });
+  }
+});
