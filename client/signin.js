@@ -8,7 +8,7 @@ document.getElementById('signinForm').addEventListener('submit', async (event) =
     const password = document.getElementById('password').value;
     let signInEndpoint = 'signin'
     
-    if (userType === 'Company') {
+    if (userType === 'company') {
         signInEndpoint = 'signincompany'
     } else {
         signInEndpoint = 'signin'
