@@ -22,6 +22,7 @@ document.getElementById('signinForm').addEventListener('submit', async (event) =
 
         if (response.data.authenticated) {
             // User is authenticated, you can redirect or display a success message.
+            window.location.href = 'customerhome.html'
             console.log('User signed in:', response.data);
         } else {
             // User is not authenticated, handle this case (e.g., show an error message).
