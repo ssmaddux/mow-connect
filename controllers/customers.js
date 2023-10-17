@@ -62,10 +62,34 @@ async function deleteCustomer(req,res) {
 }
 
 
+async function validateUserSignin(req, res) {
+    const { email, password } = req.body;
+
+    try {
+        const customer = await Customer.findOne({ email });
+
+        if (!customer) {
+            return res.json({ authenticated: false, message: 'User not found' });
+        }
+
+        if (customer.password === password) {
+            return res.json({ authenticated: true, message: 'User authenticated' });
+        } else {
+            return res.json({ authenticated: false, message: 'Incorrect password' });
+        }
+    } catch (error) {
+        return res.status(500).json({ authenticated: false, message: 'Server error' });
+    }
+}
+
+
+
+
 module.exports = {
     getAllCustomers,
     getOneCustomer,
     createCustomer,
     updateCustomer,
-    deleteCustomer
+    deleteCustomer,
+    validateUserSignin
 }

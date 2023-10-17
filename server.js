@@ -40,6 +40,10 @@ app.delete('/companies/:id', companyController.deleteCompany)
 app.delete('/customers/:id', customerController.deleteCustomer)
 app.delete('/appointments/:id', appointmentController.deleteAppointment)
 
+//validation of user login
+app.post('/signin', customerController.validateUserSignin)
+app.post('/signincompany', companyController.validateUserSignin)
+
 
 app.get('/', (req, res) => {
     res.send('This is root!!')

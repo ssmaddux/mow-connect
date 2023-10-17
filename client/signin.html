@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="signin.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="signin.js"></script>
     <title>sign In</title>
 </head>
 <body>
@@ -11,19 +13,17 @@
         Sign in
     </div>
     <div class="form">
-        <div class="checkboxdiv">
-            <input type="checkbox" name="customer" id="customer" class="checkbox">
-            <input type="checkbox" name="company" id="company" class="checkbox">
-        </div>
-        <div class="inputdiv">
-            <input type="text" placeholder="email" class="input">
-            <input type="password" placeholder="password" class="input">
-        </div>
-    </div>
-    <div class="submitdiv">
-        <button class="submitbutton">Submit</button>
-        <button class="cancelbutton">Cancel</button>
-    </div>
+            <label for="userType">Select User Type:</label>
+            <select id="userType">
+                <option value="customer">Customer</option>
+                <option value="company">Company</option>
+            </select>
+        <form id="signinForm">
+            <input type="text" placeholder="email" class="input" id="email">
+            <input type="password" placeholder="password" class="input" id="password">
+            <button type="submit" class="submitbutton">Submit</button>
+        </form>
+        
     <div class="footer">
         <a href="index.html">Home</a>
         <a href="">Contact</a>

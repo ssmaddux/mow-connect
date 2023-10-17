@@ -61,11 +61,32 @@ async function deleteCompany(req,res) {
     }
 }
 
+async function validateUserSignin(req, res) {
+    const { email, password } = req.body;
+
+    try {
+        const company = await Company.findOne({ email });
+
+        if (!company) {
+            return res.json({ authenticated: false, message: 'User not found' });
+        }
+
+        if (company.password === password) {
+            return res.json({ authenticated: true, message: 'User authenticated' });
+        } else {
+            return res.json({ authenticated: false, message: 'Incorrect password' });
+        }
+    } catch (error) {
+        return res.status(500).json({ authenticated: false, message: 'Server error' });
+    }
+}
+
 
 module.exports = {
     getAllCompanies,
     getOneCompany,
     createCompany,
     updateCompany,
-    deleteCompany
+    deleteCompany,
+    validateUserSignin
 }
