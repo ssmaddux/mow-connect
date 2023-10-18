@@ -45,7 +45,7 @@ submitInfoButton.addEventListener('click', async () => {
     const dateInput = document.getElementById("dateInput").value
     const timeInput = document.getElementById("timeInput").value
     // const companyInput = document.getElementById("companyforappointment").value
-    const addressInput = document.getElementById("address").value
+    // const addressInput = document.getElementById("address").value
     const selectedCompanyID = companySelect.value
 
     try {

@@ -25,29 +25,42 @@
                   phone: phoneInput
                 })
             
-                // Handle the response (e.g., show a success message).
-                console.log('User created:', response.data)
-              } catch (error) {
-                // Handle any errors that occur during the POST request.
-                console.error('Error creating company:', error)
-              }
-        } else {
+              // Check if the user was created successfully (HTTP status code 201).
+      if (response.status === 201) {
+        // User created successfully, redirect to the login page.
+        console.log('Company created:', response.data);
+        window.location.href = 'signin.html'; // Change the URL to your login page
+      } else {
+        // Handle other status codes if needed.
+        console.error('Failed to create company:', response.data);
+      }
+    } catch (error) {
+      // Handle any errors that occur during the POST request.
+      console.error('Error creating company:', error);
+    }
+  } else {
+    try {
+      // Send a POST request to the /signup endpoint with the customer data.
+      const response = await axios.post(`${baseUrl}signup`, {
+        email: emailInput,
+        password: passwordInput,
+        name: nameInput,
+        address: addressInput,
+        phone: phoneInput
+      });
 
-            try {
-            // Send a POST request to the /shirts endpoint with the shirt data.
-            const response = await axios.post(`${baseUrl}signup`, {
-                email: emailInput,
-                password: passwordInput,
-                name: nameInput,
-                address: addressInput,
-                phone: phoneInput
-            })
-        
-            // Handle the response (e.g., show a success message).
-            console.log('User created:', response.data)
-            } catch (error) {
-            // Handle any errors that occur during the POST request.
-            console.error('Error creating customer:', error)
-            }
-        }
+      // Check if the user was created successfully (HTTP status code 201).
+      if (response.status === 201) {
+        // User created successfully, redirect to the login page.
+        console.log('Customer created:', response.data);
+        window.location.href = 'signin.html'; // Change the URL to your login page
+      } else {
+        // Handle other status codes if needed.
+        console.error('Failed to create customer:', response.data);
+      }
+    } catch (error) {
+      // Handle any errors that occur during the POST request.
+      console.error('Error creating customer:', error);
+    }
+  }
       }) 
