@@ -1,4 +1,40 @@
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin: 0%;
+    background-image: url('../assets/paper-1074131_1280.jpg');
+    
 }
+
+.form {
+    background-image: url('../assets/lawn-mowing-tips.jpg');
+    width: 70%;
+    background-size: cover;
+    /* max-width: 700px; */
+    height: 600px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    color: white;
+    font-size: x-large;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 3px;
+}
+
+.footer a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit the color from the parent element */
+    margin: 0px 10px;
+}
+
+.header {
+    margin: 0px;
+}
+

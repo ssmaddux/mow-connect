@@ -1,0 +1,77 @@
+body {
+    padding-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('../assets/paper-1074131_1280.jpg');
+
+}
+
+#appcomp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 10%;
+}
+
+#appcomp button {
+    width: 200px; /* Adjust the width to your preference */
+    height: 40px; /* Adjust the height to your preference */
+    margin: 10px; /* Add margin between the buttons */
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+#infocontainer {
+    display: flex;
+    justify-content: center;
+    background-image: url('../assets/lawn-mowing-tips.jpg');
+    background-size: cover;
+    width: 80%;
+    
+}
+
+h3 {
+    padding-top: 10%;
+    color: rgb(8, 8, 8);
+    font-size: xx-large;
+}
+
+/* #appointments {
+    font-size: 20px;
+    padding: 10%;
+    margin-right: 5px;
+}
+
+#companies {
+    font-size: 20px;
+    padding: 10%;
+}
+
+#createappointment {
+    font-size: 20px;
+    padding: 4% 1% ;
+    margin-right: 3px;
+}
+
+#deleteappointment {
+    font-size: 20px;
+    padding: 4% 1% ;
+}
+
+#appcomp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-bottom: 1%;
+    width: fit-content;
+}
+#createdelete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+} */

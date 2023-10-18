@@ -2,12 +2,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    background-image: url('../assets/paper-1074131_1280.jpg');
+    
 }
 
 .form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: whitesmoke;
+    width: 65%;
+    padding-top: 0%;
+    margin-top: 10%;
 }
 
 
@@ -15,5 +22,30 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 200px;
+    font-size: 20px;
     
+}
+
+.input {
+    width: 100%; /* Expand input fields to full width */
+    padding: 10px; /* Add some padding to input fields for spacing */
+}
+
+
+
+.checkbox {
+    width: 20px; /* Increase width of checkboxes */
+    height: 20px; /* Increase height of checkboxes */
+}
+
+.submitdiv {
+    margin: 15px;
+}
+
+#submitbutton {
+    font-size: 15px;
+}
+
+#cancelbutton {
+    font-size: 15px;
 }
