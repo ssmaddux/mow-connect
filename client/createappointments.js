@@ -47,7 +47,9 @@ submitInfoButton.addEventListener('click', async () => {
     // const companyInput = document.getElementById("companyforappointment").value
     // const addressInput = document.getElementById("address").value
     const selectedCompanyID = companySelect.value
-
+if(dateInput === null || timeInput === "") {
+    alert("Please choose a date time and company for your appointment")
+} else {
     try {
         
         const response = await axios.post(`${base_Url}appointments`, {
@@ -59,9 +61,12 @@ submitInfoButton.addEventListener('click', async () => {
 
         // Handle the response (e.g., show a success message).
         console.log('Appointment created:', response.data)
+        window.location.href = 'customerhome.html';
+        alert(`Appointment created on ${dateInput} at ${timeInput} `)
     } catch (error) {
         // Handle any errors that occur during the POST request.
         console.error('Error creating appointment:', error)
     }
+}    
 })
 });

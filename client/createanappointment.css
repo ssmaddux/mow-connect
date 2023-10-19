@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('../assets/paper-1074131_1280.jpg');
+}
+
+#photo {
+    width: 100%; /* Set the width to 100% of its container */
+    height: 300px; /* Set the desired height */
+    background-image: url('../assets/lawn-191941_640.jpg');
+    background-size: cover; /* Scale the background image to cover the entire div */
+    background-position: center; /* Center the background image horizontally and vertically */
+}

@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
             // Optionally, you can display a success message to the user
             alert('Appointment deleted successfully.');
+            window.location.href = 'customerhome.html';
 
             // Refresh the list of appointments
             populateAppointments();

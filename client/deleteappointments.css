@@ -1,0 +1,21 @@
+body {
+    background-image: url('../assets/lawn-191941_640.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover; /* Scale the background image to cover the entire div */
+    background-position: center; /* Center the background image horizontally and vertically */
+    height: 950px;
+}
+
+#cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('../assets/paper-1074131_1280.jpg');
+    height: 200px;
+    width: 80%;
+    font-size: large;
+}

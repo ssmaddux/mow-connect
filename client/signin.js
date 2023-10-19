@@ -1,11 +1,11 @@
-const baseUrl = "http://localhost:3001/";
+const baseUrl = "http://localhost:3001/"
 
 document.getElementById('signinForm').addEventListener('submit', async (event) => {
     event.preventDefault(); // Prevent the form from being submitted via HTTP (which is the default behavior).
 
-    const userType = document.getElementById('userType').value;
+    const userType = document.getElementById('userType').value
     const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+    const password = document.getElementById('password').value
     let signInEndpoint = 'signin'
     
     if (userType === 'company') {
@@ -23,14 +23,15 @@ document.getElementById('signinForm').addEventListener('submit', async (event) =
         if (response.data.authenticated) {
             // User is authenticated, you can redirect or display a success message.
             window.location.href = 'customerhome.html'
-            console.log('User signed in:', response.data);
+            console.log('User signed in:', response.data)
         } else {
             // User is not authenticated, handle this case (e.g., show an error message).
-            console.log('Authentication failed:', response.data);
+            console.log('Authentication failed:', response.data)
+            alert('Email/password or user type inccorrect')
         }
     } catch (error) {
         // Handle errors from the server.
-        console.error('Error during sign-in:', error);
+        console.error('Error during sign-in:', error)
     }
-});
+})
 
