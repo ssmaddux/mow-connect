@@ -7,3 +7,6 @@ Click [here](https://lucid.app/lucidchart/5b06cb8f-d9d4-4e5e-8541-71bc87e9e674/e
 Click [here](https://lucid.app/lucidchart/4c7b53ad-eb0b-4d7b-8c37-cf92470ef484/edit?view_items=HCAD7A.S60Hl&invitationId=inv_97fccc94-bdc0-4a31-b761-949dc2a57c55)
 # Images
 ![](./assets/login.PNG)
+![](./assets/login1.PNG)
+![](./assets/userhome.PNG)
+![](./assets/Appointments.PNG)
